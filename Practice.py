@@ -24,5 +24,12 @@ time.sleep(2)
 driver.find_element(By.NAME, "password").send_keys("admin123")
 driver.find_element(By.XPATH, "//button[normalize-space()='Login']").click()
 
+#verify the title of the page
+expected_title = "OrangeHRM"
+if expected_title == driver.title:
+    print("Login successful, title is correct.")
+else:
+    print("Login failed, title is incorrect.")
+
 time.sleep(5)
 driver.quit()
