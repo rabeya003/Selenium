@@ -14,7 +14,9 @@ driver.get("https://money.rediff.com/gainers/bse/daily/groupa")
 text_msg=driver.find_element(By.XPATH, "//a[normalize-space()='India Cements Lt']/self::a").text
 print(text_msg)
 
-
+#Parant
+text_msg = driver.find_element(By.XPATH, "//a[normalize-space()='India Cements Lt']/parent::td").text
+print(text_msg)
 
 # 6. Close browser after 40 seconds
 time.sleep(10)
