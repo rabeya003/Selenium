@@ -22,6 +22,17 @@ rd_female=driver.find_element(By.XPATH,"//input[@id='gender-female']")
 print(rd_male.is_selected())
 print(rd_female.is_selected())
 
+rd_male.click() # selecting male radio button..
+print("After selecting male radio button .....")
+print(rd_male.is_selected()) # True
+print(rd_female.is_selected()) # False
+time.sleep(2) 
+
+rd_female.click() # selecting male radio button..
+print("After selecting Female radio button .....")
+print(rd_male.is_selected()) # false
+print(rd_female.is_selected()) # true
+
 
 # 6. Close browser after 20 seconds
 time.sleep(20)
