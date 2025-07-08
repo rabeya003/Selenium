@@ -16,6 +16,11 @@ searchhBox=driver.find_element(By.XPATH,"//input[@id='small-searchterms']")
 print("Display status:",searchhBox.is_displayed())
 print("Enabled status:",searchhBox.is_enabled())
 
+#is_selected() -for radio buttons and check boxes
+rd_male=driver.find_element(By.XPATH,"//input[@id='gender-male']")
+rd_female=driver.find_element(By.XPATH,"//input[@id='gender-female']")
+print(rd_male.is_selected())
+print(rd_female.is_selected())
 
 
 # 6. Close browser after 20 seconds
